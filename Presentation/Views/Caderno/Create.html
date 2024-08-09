@@ -1,0 +1,15 @@
+{% extends "Shared/Anotacoes.html" %}
+
+{% block content %}
+<form class="h-100 d-flex flex-column" action="{{ url_for('main.Create') }}" method="post">
+    <div class="d-flex py-2">
+        <input class="w-100 p-1 me-2" type="text" placeholder="Título" required name="titulo" autocomplete="off">
+        <button type="submit" class="btn btn-success px-4">Salvar</button>
+    </div>
+    <div class="notebook">
+        <div class="page">
+            <textarea class="note-content" placeholder="Escreva suas anotações aqui..." name="anotacao"></textarea>
+        </div>
+    </div>
+</form>
+{% endblock %}
